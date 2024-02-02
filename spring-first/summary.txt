@@ -12,3 +12,13 @@ RequestMapping과 GetMapping/PostMapping의 차이
 Static Resources(정적 자원 처리)
 	img, css, js의 저장 위치
 	- webapp/resources 하위에 저장.
+	
+생성자 : 객체 생성 시(인스턴스 생성시) 수행해야 할 작업을 지정하는 특수 메서드
+	접근제어자 이름(파라미터) {}
+	종류 :
+	public : 모든곳에서 사용가능(메소드 만들때 사용)
+	protected : 같은클래스,다른클래스여도 상속관계에서는 사용 가능 
+	default : 같은 클래스 내에서만 사용가능
+	private(멤버변수)
+	
+------------------------------------------------------------
