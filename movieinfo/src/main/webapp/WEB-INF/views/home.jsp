@@ -55,6 +55,11 @@
 				</c:forEach>
 			</c:if>
 		</div>
+		
+		<div class="paging-area">
+			<div class="paging">${paging}</div>
+		</div>
+		
 	</div>
 	
 	<jsp:include page="footer.jsp"/>

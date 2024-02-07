@@ -4,8 +4,10 @@
 
 <configuration>
 	<typeAliases>
-		<!-- <typeAlias type="com.icia.movieinfo.dto.MovieDto" 
-				alias="movie"/> -->
+		<!-- 
+		<typeAlias type="com.icia.movieinfo.dto.MovieDto" 
+				alias="movie"/>
+		-->
 		<package name="com.icia.movieinfo.dto"/>
 	</typeAliases>
 </configuration>
