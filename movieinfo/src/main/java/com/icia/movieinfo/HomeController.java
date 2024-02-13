@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.icia.movieinfo.dto.MovieDto;
 import com.icia.movieinfo.service.MovieService;
+import com.mysql.cj.log.Log;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -49,6 +50,45 @@ public class HomeController {
 							RedirectAttributes rttr) {
 		log.info("writeProc()");
 		String view = mServ.insertMovie(files, movie, session, rttr);
+		return view;
+	}
+	
+	@GetMapping("detail")
+	public String detail(Integer m_code, Model model) {
+		log.info("detail()");
+		mServ.getMovie(m_code, model);
+		
+		return "detail"; 
+	}
+	
+	//수정페이지로 전환
+	@GetMapping("updateFrm")
+	public String updateFrm(Integer m_code,Model model) {
+		log.info("updateFrm()");
+		mServ.getMovie(m_code, model);
+		
+		return "updateFrm";
+	}
+	
+	//수정 데이터 처리
+	@PostMapping("updateProc")
+	public String updateProc(@RequestPart List<MultipartFile> files, 
+			MovieDto movie,
+			HttpSession session,
+			RedirectAttributes rttr) {
+		log.info("updateProc()");
+		String view = mServ.movieUpdate(files, movie, session, rttr);
+		
+		return view;
+	}
+	
+	@GetMapping("delete")
+	public String delete(Integer m_code,
+						HttpSession session,
+						RedirectAttributes rttr) {
+		log.info("delete()");
+		String view = mServ.movieDelete(m_code,session,rttr);
+		
 		return view;
 	}
 	

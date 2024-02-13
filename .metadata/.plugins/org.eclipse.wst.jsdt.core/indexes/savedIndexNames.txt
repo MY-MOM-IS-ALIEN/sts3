@@ -10,4 +10,3 @@ INDEX VERSION 1.4+C:\sts3-work\.metadata\.plugins\org.eclipse.wst.jsdt.core\inde
 3940815378.index
 2451664161.index
 4279859105.index
-108176975.index
