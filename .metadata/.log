@@ -5657,3 +5657,601 @@ java.lang.IllegalArgumentException: Comparison method violates its general contr
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-13 15:24:10.768
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 4 0 2024-02-13 16:50:51.774
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.update(AbstractLaunchToolbarPulldown.java:112)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.access$4(AbstractLaunchToolbarPulldown.java:110)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown$3.run(AbstractLaunchToolbarPulldown.java:134)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3704)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3226)
+	at org.eclipse.swt.internal.win32.OS.ShowWindow(Native Method)
+	at org.eclipse.swt.widgets.Decorations.setVisible(Decorations.java:1267)
+	at org.eclipse.swt.widgets.Shell.setVisible(Shell.java:2042)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1273)
+	at org.eclipse.jface.window.Window.open(Window.java:795)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.open(ProgressMonitorDialog.java:631)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.aboutToRun(ProgressMonitorDialog.java:540)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:465)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:228)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2942)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1368)
+	at org.eclipse.ui.internal.Workbench.lambda$16(Workbench.java:2744)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4229)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3232)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4854)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2264)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4966)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3621)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2024-02-14 16:36:19.264 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-02-14 16:37:10.278
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2024-02-14 16:37:15.175
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-02-14 16:37:15.175
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@451e8bd0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d3effcb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-02-14 16:37:31.019
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2024-02-14 16:39:03.729
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:09.463
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:09.952
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:12.226
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:12.245
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.263
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.288
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.300
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.832
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.851
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:15.857
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.270
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.279
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.347
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.896
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.913
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:16.960
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:17.880
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:17.893
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:17.928
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:49.728
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:49.730
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:52.527
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:52.532
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:56.989
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:56.993
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:58.236
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:58.239
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:59.411
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 16:39:59.413
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:18.209
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:18.211
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:19.322
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:19.324
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:20.400
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:20.403
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:22.576
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:03:22.578
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:06:10.426
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:06:10.432
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:24:36.848
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:24:36.850
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:30:04.181
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:30:04.183
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:30:26.165
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:30:26.167
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:38:14.836
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:38:14.838
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2024-02-14 17:38:27.064
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2024-02-14 17:38:27.064
+!MESSAGE Multiple Contexts have a path of "/movieinfo".
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:49.263
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:49.348
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:49.475
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:49.480
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:51.897
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:51.923
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:48:51.928
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:10.144
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:10.147
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2024-02-14 17:49:11.471
+!MESSAGE Error occured processing '/later/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml'
+!STACK 0
+java.io.FileNotFoundException: C:\sts3-work\later\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.springframework.ide.eclipse.core.io.FileResource.getInputStream(FileResource.java:85)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$2.loadBeanDefinitions(BeansConfig.java:395)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:454)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.springframework.ide.eclipse.beans.core 1 0 2024-02-14 17:49:11.474
+!MESSAGE Error occured processing '/later/src/main/webapp/WEB-INF/spring/root-context.xml'
+!STACK 0
+java.io.FileNotFoundException: C:\sts3-work\later\src\main\webapp\WEB-INF\spring\root-context.xml (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.springframework.ide.eclipse.core.io.FileResource.getInputStream(FileResource.java:85)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$2.loadBeanDefinitions(BeansConfig.java:395)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:454)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansConfig$3.call(BeansConfig.java:1)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.springframework.ide.eclipse.core 2 1 2024-02-14 17:49:11.478
+!MESSAGE java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+!STACK 0
+java.lang.RuntimeException: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:662)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:639)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.getDeploymentDescriptor(SpringCoreUtils.java:308)
+	at org.springframework.ide.eclipse.metadata.locate.DynamicWebProjectBeansConfigLocator.requiresRefresh(DynamicWebProjectBeansConfigLocator.java:122)
+	at org.springframework.ide.eclipse.beans.core.internal.model.resources.BeansResourceChangeListener.requiresRefresh(BeansResourceChangeListener.java:62)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:117)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceTreeVisitor.visit(SpringProjectContributionManager.java:379)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:155)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:130)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:853)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:389)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:410)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:160)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:656)
+	... 33 more
+
+!ENTRY org.springframework.ide.eclipse.core 2 1 2024-02-14 17:49:12.710
+!MESSAGE java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+!STACK 0
+java.lang.RuntimeException: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:662)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:639)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.getDeploymentDescriptor(SpringCoreUtils.java:308)
+	at org.springframework.ide.eclipse.metadata.locate.DynamicWebProjectBeansConfigLocator.requiresRefresh(DynamicWebProjectBeansConfigLocator.java:122)
+	at org.springframework.ide.eclipse.beans.core.internal.model.resources.BeansResourceChangeListener.requiresRefresh(BeansResourceChangeListener.java:62)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:117)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceTreeVisitor.visit(SpringProjectContributionManager.java:379)
+	at org.eclipse.core.internal.resources.Resource.lambda$1(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.lambda$0(Resource.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:85)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.doIteration(ElementTreeIterator.java:90)
+	at org.eclipse.core.internal.watson.ElementTreeIterator.iterate(ElementTreeIterator.java:135)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:94)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:55)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:117)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:105)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:155)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:130)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:853)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:361)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:490)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:565)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:603)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils$1.run(SpringCoreUtils.java:757)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:656)
+	... 32 more
+
+!ENTRY org.springframework.ide.eclipse.core 2 1 2024-02-14 17:49:12.715
+!MESSAGE java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+!STACK 0
+java.lang.RuntimeException: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:662)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:639)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.getDeploymentDescriptor(SpringCoreUtils.java:308)
+	at org.springframework.ide.eclipse.metadata.locate.DynamicWebProjectBeansConfigLocator.canLocateInProject(DynamicWebProjectBeansConfigLocator.java:205)
+	at org.springframework.ide.eclipse.beans.core.model.locate.AbstractPathMatchingBeansConfigLocator.locateBeansConfigs(AbstractPathMatchingBeansConfigLocator.java:69)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansProject$2.run(BeansProject.java:1174)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansProject.populateAutoDetectedConfigsAndConfigSetsInternally(BeansProject.java:1165)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansProject$1.run(BeansProject.java:1115)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: C:\sts3-work\later\.settings\org.eclipse.wst.common.component (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
+	at org.springframework.ide.eclipse.core.SpringCoreUtils.parseDocument(SpringCoreUtils.java:656)
+	... 9 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:40.064
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:40.187
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:40.192
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:42.542
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:42.552
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-14 17:49:42.556
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2024-02-15 14:05:55.156 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-02-15 14:06:49.708
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-02-15 14:06:49.708
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42f15e87,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1911427a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-02-15 14:07:15.050
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:26.928
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:31.375
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:31.390
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.052
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.072
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.076
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.184
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.197
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.200
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.304
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.314
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.317
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.407
+!MESSAGE The artifact org.slf4j:slf4j-log4j12:jar:2.0.9 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.9
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.417
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-02-15 14:07:33.420
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2024-02-16 14:10:37.804 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-02-16 14:11:30.420
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-02-16 14:11:30.420
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45c3cf0c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58cd7486,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-02-16 14:11:45.468
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
